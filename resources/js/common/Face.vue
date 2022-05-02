@@ -52,13 +52,13 @@ export default {
 
 <style lang="scss" scoped>
 .standard-circle{
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 160px;
     background-color: lightslategray;
     outline: 2px solid red;
     position: absolute;
     border-radius: 50%;
-    z-index: 2;
+    z-index: 3;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
@@ -68,7 +68,7 @@ export default {
     width: 2px;
     height: 100px;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     background-color: white;
     top: 50%;
     left: 50%;
@@ -76,22 +76,22 @@ export default {
     transition: all 1s linear;
 
     &.hour{
-        height: 20px;
+        height: 25px;
     }
 
     &.minute{
-        height: 40px;
+        height: 45px;
     }
 
     &.second{
-        height: 60px;
+        height: 55px;
     }
 }
 
 .base-face{
     .face{
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
         background-color: rgb(109, 149, 189);
         outline: 2px solid red;
 

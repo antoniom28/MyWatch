@@ -2012,6 +2012,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Strap",
   data: function data() {
@@ -2035,6 +2046,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Face_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Face.vue */ "./resources/js/common/Face.vue");
 /* harmony import */ var _Strap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Strap.vue */ "./resources/js/common/Strap.vue");
+//
+//
+//
 //
 //
 //
@@ -6574,7 +6588,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".standard-circle[data-v-24d666da] {\n  width: 170px;\n  height: 170px;\n  background-color: lightslategray;\n  outline: 2px solid red;\n  position: absolute;\n  border-radius: 50%;\n  z-index: 2;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.standard-hands[data-v-24d666da] {\n  width: 2px;\n  height: 100px;\n  position: absolute;\n  z-index: 2;\n  background-color: white;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, 8%);\n  transition: all 1s linear;\n}\n.standard-hands.hour[data-v-24d666da] {\n  height: 20px;\n}\n.standard-hands.minute[data-v-24d666da] {\n  height: 40px;\n}\n.standard-hands.second[data-v-24d666da] {\n  height: 60px;\n}\n.base-face .face[data-v-24d666da] {\n  width: 150px;\n  height: 150px;\n  background-color: rgb(109, 149, 189);\n  outline: 2px solid red;\n}\n.base-face .face .base-hands[data-v-24d666da] {\n  width: 10px;\n  height: 10px;\n  background-color: white;\n  outline: unset;\n}\n.base-face .face .hands[data-v-24d666da] {\n  width: 5px;\n  height: 5px;\n  background-color: rgb(109, 149, 189);\n  outline: unset;\n}", ""]);
+exports.push([module.i, ".standard-circle[data-v-24d666da] {\n  width: 160px;\n  height: 160px;\n  background-color: lightslategray;\n  outline: 2px solid red;\n  position: absolute;\n  border-radius: 50%;\n  z-index: 3;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.standard-hands[data-v-24d666da] {\n  width: 2px;\n  height: 100px;\n  position: absolute;\n  z-index: 3;\n  background-color: white;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, 8%);\n  transition: all 1s linear;\n}\n.standard-hands.hour[data-v-24d666da] {\n  height: 25px;\n}\n.standard-hands.minute[data-v-24d666da] {\n  height: 45px;\n}\n.standard-hands.second[data-v-24d666da] {\n  height: 55px;\n}\n.base-face .face[data-v-24d666da] {\n  width: 140px;\n  height: 140px;\n  background-color: rgb(109, 149, 189);\n  outline: 2px solid red;\n}\n.base-face .face .base-hands[data-v-24d666da] {\n  width: 10px;\n  height: 10px;\n  background-color: white;\n  outline: unset;\n}\n.base-face .face .hands[data-v-24d666da] {\n  width: 5px;\n  height: 5px;\n  background-color: rgb(109, 149, 189);\n  outline: unset;\n}", ""]);
 
 // exports
 
@@ -6593,7 +6607,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".strap[data-v-18602e5a] {\n  width: 55px;\n  height: 550px;\n  z-index: 1;\n  background-color: purple;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.under-face-top[data-v-18602e5a] {\n  width: 65px;\n  height: 190px;\n  z-index: 1;\n  border-width: 10px 5px;\n  border-style: solid;\n  border-color: grey;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}", ""]);
+exports.push([module.i, ".strap[data-v-18602e5a] {\n  width: 55px;\n  height: 550px;\n  z-index: 2;\n  background-color: purple;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.under-face[data-v-18602e5a] {\n  width: 65px;\n  height: 180px;\n  z-index: 1;\n  border-width: 10px 5px;\n  border-style: solid;\n  border-color: grey;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.loop-box[data-v-18602e5a] {\n  z-index: 1;\n  /* border-width: 10px 5px;\n   border-style: solid;\n   border-color: grey;*/\n  position: absolute;\n  top: 8%;\n  left: 50%;\n  transform: translate(-50%, 0%);\n}\n.loop-box .loop[data-v-18602e5a] {\n  background-color: rgb(175, 173, 173);\n  margin: 5px 0;\n  width: 65px;\n  height: 12px;\n}\n.point-box[data-v-18602e5a] {\n  width: 55px;\n  height: 80px;\n  z-index: 1;\n  position: absolute;\n  bottom: 3%;\n  left: 50%;\n  transform: translate(-50%, 0%);\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n}\n.point-box .point[data-v-18602e5a] {\n  background-color: white;\n  height: 12px;\n  width: 12px;\n  border-radius: 50%;\n}", ""]);
 
 // exports
 
@@ -6612,7 +6626,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".watch-box[data-v-20810189] {\n  position: relative;\n  min-width: 150px;\n  min-height: 550px;\n}", ""]);
+exports.push([module.i, ".watch-box[data-v-20810189] {\n  position: relative;\n  min-width: 150px;\n  min-height: 550px;\n}\n.hook-box[data-v-20810189] {\n  width: 68px;\n  height: 36px;\n  z-index: 1;\n  border-width: 10px 5px 4px 5px;\n  border-style: solid;\n  border-color: grey;\n  position: absolute;\n  top: -5%;\n  left: 50%;\n  transform: translate(-50%, 0%);\n}\n.hook-center[data-v-20810189] {\n  width: 5px;\n  height: 36px;\n  z-index: 4;\n  background-color: rgb(187, 187, 187);\n  position: absolute;\n  top: -5%;\n  left: 50%;\n  transform: translate(-50%, 0%);\n}", ""]);
 
 // exports
 
@@ -38658,7 +38672,21 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "strap" }, [
-      _c("div", { staticClass: "under-face-top" }),
+      _c("div", { staticClass: "under-face" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "loop-box" }, [
+        _c("div", { staticClass: "loop" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "loop" }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "point-box" }, [
+        _c("div", { staticClass: "point" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "point" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "point" }),
+      ]),
     ])
   },
 ]
@@ -38686,7 +38714,15 @@ var render = function () {
   return _c(
     "div",
     { staticClass: "watch-box" },
-    [_c("Face"), _vm._v(" "), _c("Strap")],
+    [
+      _c("div", { staticClass: "hook-box" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "hook-center" }),
+      _vm._v(" "),
+      _c("Face"),
+      _vm._v(" "),
+      _c("Strap"),
+    ],
     1
   )
 }
