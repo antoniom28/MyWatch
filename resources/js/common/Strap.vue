@@ -31,11 +31,11 @@ export default {
 
 .strap{
     width: 55px;
-    height: 550px;
+    height: 600px;
     z-index: 2;
     background-color: purple;
     position: absolute;
-    top: 50%;
+    top: calc(50% + 30px);
     left: 50%;
     transform: translate(-50% , -50%);
 }
@@ -49,7 +49,7 @@ export default {
     border-color: grey;
     //background-color: rgb(213, 241, 48);
     position: absolute;
-    top: 50%;
+    top: calc(50% - 30px);
     left: 50%;
     transform: translate(-50% , -50%);
 }

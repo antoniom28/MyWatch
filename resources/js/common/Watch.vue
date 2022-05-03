@@ -24,10 +24,12 @@ export default {
 
 <style lang="scss" scoped>
 .watch-box{
-    position: relative;
-    min-width: 150px;
-    min-height: 550px;
-    //left: 100px; //da togliere 
+    height: 100%;
+    position: absolute;
+    right: 250px;
+    //top: -20px;
+    top: 0;
+    width: 170px;
 }
 
 .hook-box{
@@ -39,9 +41,9 @@ export default {
     border-color: grey;
     //background-color: rgb(213, 241, 48);
     position: absolute;
-    top: -5%;
+    top: calc(50% - 280px);
     left: 50%;
-    transform: translate(-50% , 0%);
+    transform: translate(-50%, -50%);
 }
 
 .hook-center{ 
@@ -51,8 +53,8 @@ export default {
         background-color: rgb(187, 187, 187);
         //background-color: rgb(213, 241, 48);
         position: absolute;
-        top: -5%;
+        top: calc(50% - 280px);
         left: 50%;
-        transform: translate(-50% , 0%);
+        transform: translate(-50%, -50%);
     }
 </style>

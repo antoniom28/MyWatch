@@ -45,6 +45,7 @@ export default {
             this.hour = today.getHours();
             this.minute = today.getMinutes();
             this.second = today.getSeconds();
+            //console.log(this.hour,this.minute,this.second);
         },
     },
 }
@@ -70,7 +71,7 @@ export default {
     position: absolute;
     z-index: 3;
     background-color: white;
-    top: 50%;
+    bottom: 50%;
     left: 50%;
     transform: translate(-50% , 8%);
     transition: all 1s linear;
