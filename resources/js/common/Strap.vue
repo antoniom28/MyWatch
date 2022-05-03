@@ -1,10 +1,10 @@
 <template>
-    <div class="strap">
+    <div :style="`background-color: ${strapColor ? strapColor : '#342211'};`" class="strap">
         <div class="under-face"></div>
 
         <div class="loop-box">
-            <div class="loop"></div>
-            <div class="loop"></div>
+            <div :style="`background-color: ${loopColor ? loopColor : 'grey'};`" class="loop"></div>
+            <div :style="`background-color: ${loopColor ? loopColor : 'grey'};`" class="loop"></div>
         </div>
 
         <div class="point-box">
@@ -21,7 +21,9 @@ export default {
     data(){
         return{}
     },
-    props:{},
+    props:{
+        strapColor: String,
+        loopColor: String,},
     components:{},
     methods:{},
 }
@@ -33,7 +35,7 @@ export default {
     width: 55px;
     height: 600px;
     z-index: 2;
-    background-color: purple;
+    //background-color: purple;
     position: absolute;
     top: calc(50% + 30px);
     left: 50%;
@@ -67,7 +69,7 @@ export default {
     transform: translate(-50% , 0%);
 
     .loop{
-        background-color: rgb(175, 173, 173);
+        //background-color: rgb(175, 173, 173);
         margin: 5px 0;
         width: 65px;
         height: 12px;

@@ -1,17 +1,16 @@
 <template>
-    <div class="base-face standard-circle">
-        <!-- <h1> {{hour}}:{{minute}}:{{second}} </h1> -->
-        <div class="face standard-circle">
+    <div :style="`border: 2px solid ${faceColor ? faceColor : 'silver'};`" class="base-face standard-circle">
+        <div :style="`background-color:${faceColor ? faceColor : 'silver'}`" class="face standard-circle">
             <div :style="`transform: translate(-50% , -50%) rotate(${hour * 15}deg);`" id="hour" class="base-hands hour standard-circle">
-                <div class="standard-hands hour"></div>
+                <div :style="`background-color:${handsColor ? handsColor : 'white'}`" class="standard-hands hour"></div>
             </div>
 
             <div :style="`transform: translate(-50% , -50%) rotate(${minute * 6}deg);`" id="minute" class="base-hands minute standard-circle">
-                <div class="standard-hands minute"></div>
+                <div :style="`background-color:${handsColor ? handsColor : 'white'}`" class="standard-hands minute"></div>
             </div>
 
-            <div :style="`transform: translate(-50% , -50%) rotate(${second * 6}deg);`" id="second" class="base-hands second standard-circle">
-                <div class="standard-hands second"></div>
+            <div :style="`transform: translate(-50% , -50%) rotate(${second * 6}deg); background-color:${handsColor ? handsColor : 'white'};`" id="second" class="base-hands second standard-circle">
+                <div :style="`background-color:${handsColor ? handsColor : 'white'}`" class="standard-hands second"></div>
             </div>
 
             <div class="hands standard-circle"></div>
@@ -35,7 +34,10 @@ export default {
             this.takeTime();
         }, 1000);
     },
-    props:{},
+    props:{
+        faceColor: String,
+        handsColor: String,
+    },
     components:{},
     methods:{
         takeTime(){
@@ -55,8 +57,7 @@ export default {
 .standard-circle{
     width: 160px;
     height: 160px;
-    background-color: lightslategray;
-    outline: 2px solid red;
+    background-color: #dcdcdc;
     position: absolute;
     border-radius: 50%;
     z-index: 3;
@@ -74,7 +75,7 @@ export default {
     bottom: 50%;
     left: 50%;
     transform: translate(-50% , 8%);
-    transition: all 1s linear;
+    transition: transform 1s linear;
 
     &.hour{
         height: 25px;
@@ -93,21 +94,17 @@ export default {
     .face{
         width: 140px;
         height: 140px;
-        background-color: rgb(109, 149, 189);
-        outline: 2px solid red;
 
         .base-hands{
             width: 10px;
             height: 10px;
             background-color: white;
-            outline: unset;
         }
 
         .hands{
             width: 5px;
             height: 5px;
-            background-color: rgb(109, 149, 189);
-            outline: unset;
+            background-color: inherit;
         }
     }
 }

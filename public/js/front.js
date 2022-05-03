@@ -1963,7 +1963,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Face",
   data: function data() {
@@ -1981,7 +1980,10 @@ __webpack_require__.r(__webpack_exports__);
       _this.takeTime();
     }, 1000);
   },
-  props: {},
+  props: {
+    faceColor: String,
+    handsColor: String
+  },
   components: {},
   methods: {
     takeTime: function takeTime() {
@@ -2028,7 +2030,10 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
-  props: {},
+  props: {
+    strapColor: String,
+    loopColor: String
+  },
   components: {},
   methods: {}
 });
@@ -2063,7 +2068,12 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
-  props: {},
+  props: {
+    faceColor: String,
+    handsColor: String,
+    strapColor: String,
+    loopColor: String
+  },
   components: {
     Face: _Face_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     Strap: _Strap_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -2158,17 +2168,93 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Home",
   data: function data() {
-    return {};
+    return {
+      colors: ['red', 'purple', 'yellow', 'green', 'blue', 'violet', 'pink'],
+      //colorsContrast: ['orange','violet','red','blue','skyblue','green','fuchsia'],
+      faceColor: null,
+      handsColor: null,
+      strapColor: null,
+      loopColor: null,
+      selector: 0
+    };
   },
   props: {},
   components: {
     Watch: _common_Watch_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  methods: {}
+  methods: {
+    goNext: function goNext() {
+      this.selector++;
+    },
+    selectColor: function selectColor(color, index) {
+      switch (this.selector) {
+        case 0:
+          this.faceColor = color;
+          break;
+
+        case 1:
+          this.handsColor = color;
+          break;
+
+        case 2:
+          this.strapColor = color;
+          break;
+
+        case 3:
+          this.loopColor = color;
+          break;
+      }
+    }
+  }
 });
 
 /***/ }),
@@ -6598,7 +6684,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".standard-circle[data-v-24d666da] {\n  width: 160px;\n  height: 160px;\n  background-color: lightslategray;\n  outline: 2px solid red;\n  position: absolute;\n  border-radius: 50%;\n  z-index: 3;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.standard-hands[data-v-24d666da] {\n  width: 2px;\n  height: 100px;\n  position: absolute;\n  z-index: 3;\n  background-color: white;\n  bottom: 50%;\n  left: 50%;\n  transform: translate(-50%, 8%);\n  transition: all 1s linear;\n}\n.standard-hands.hour[data-v-24d666da] {\n  height: 25px;\n}\n.standard-hands.minute[data-v-24d666da] {\n  height: 45px;\n}\n.standard-hands.second[data-v-24d666da] {\n  height: 55px;\n}\n.base-face .face[data-v-24d666da] {\n  width: 140px;\n  height: 140px;\n  background-color: rgb(109, 149, 189);\n  outline: 2px solid red;\n}\n.base-face .face .base-hands[data-v-24d666da] {\n  width: 10px;\n  height: 10px;\n  background-color: white;\n  outline: unset;\n}\n.base-face .face .hands[data-v-24d666da] {\n  width: 5px;\n  height: 5px;\n  background-color: rgb(109, 149, 189);\n  outline: unset;\n}", ""]);
+exports.push([module.i, ".standard-circle[data-v-24d666da] {\n  width: 160px;\n  height: 160px;\n  background-color: #dcdcdc;\n  position: absolute;\n  border-radius: 50%;\n  z-index: 3;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.standard-hands[data-v-24d666da] {\n  width: 2px;\n  height: 100px;\n  position: absolute;\n  z-index: 3;\n  background-color: white;\n  bottom: 50%;\n  left: 50%;\n  transform: translate(-50%, 8%);\n  transition: transform 1s linear;\n}\n.standard-hands.hour[data-v-24d666da] {\n  height: 25px;\n}\n.standard-hands.minute[data-v-24d666da] {\n  height: 45px;\n}\n.standard-hands.second[data-v-24d666da] {\n  height: 55px;\n}\n.base-face .face[data-v-24d666da] {\n  width: 140px;\n  height: 140px;\n}\n.base-face .face .base-hands[data-v-24d666da] {\n  width: 10px;\n  height: 10px;\n  background-color: white;\n}\n.base-face .face .hands[data-v-24d666da] {\n  width: 5px;\n  height: 5px;\n  background-color: inherit;\n}", ""]);
 
 // exports
 
@@ -6617,7 +6703,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".strap[data-v-18602e5a] {\n  width: 55px;\n  height: 600px;\n  z-index: 2;\n  background-color: purple;\n  position: absolute;\n  top: calc(50% + 30px);\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.under-face[data-v-18602e5a] {\n  width: 65px;\n  height: 180px;\n  z-index: 1;\n  border-width: 10px 5px;\n  border-style: solid;\n  border-color: grey;\n  position: absolute;\n  top: calc(50% - 30px);\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.loop-box[data-v-18602e5a] {\n  z-index: 1;\n  /* border-width: 10px 5px;\n   border-style: solid;\n   border-color: grey;*/\n  position: absolute;\n  top: 8%;\n  left: 50%;\n  transform: translate(-50%, 0%);\n}\n.loop-box .loop[data-v-18602e5a] {\n  background-color: rgb(175, 173, 173);\n  margin: 5px 0;\n  width: 65px;\n  height: 12px;\n}\n.point-box[data-v-18602e5a] {\n  width: 55px;\n  height: 80px;\n  z-index: 1;\n  position: absolute;\n  bottom: 3%;\n  left: 50%;\n  transform: translate(-50%, 0%);\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n}\n.point-box .point[data-v-18602e5a] {\n  background-color: white;\n  height: 12px;\n  width: 12px;\n  border-radius: 50%;\n}", ""]);
+exports.push([module.i, ".strap[data-v-18602e5a] {\n  width: 55px;\n  height: 600px;\n  z-index: 2;\n  position: absolute;\n  top: calc(50% + 30px);\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.under-face[data-v-18602e5a] {\n  width: 65px;\n  height: 180px;\n  z-index: 1;\n  border-width: 10px 5px;\n  border-style: solid;\n  border-color: grey;\n  position: absolute;\n  top: calc(50% - 30px);\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.loop-box[data-v-18602e5a] {\n  z-index: 1;\n  /* border-width: 10px 5px;\n   border-style: solid;\n   border-color: grey;*/\n  position: absolute;\n  top: 8%;\n  left: 50%;\n  transform: translate(-50%, 0%);\n}\n.loop-box .loop[data-v-18602e5a] {\n  margin: 5px 0;\n  width: 65px;\n  height: 12px;\n}\n.point-box[data-v-18602e5a] {\n  width: 55px;\n  height: 80px;\n  z-index: 1;\n  position: absolute;\n  bottom: 3%;\n  left: 50%;\n  transform: translate(-50%, 0%);\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n}\n.point-box .point[data-v-18602e5a] {\n  background-color: white;\n  height: 12px;\n  width: 12px;\n  border-radius: 50%;\n}", ""]);
 
 // exports
 
@@ -6656,7 +6742,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".main-container[data-v-b3c5cf30] {\n  position: relative;\n  background-image: url(" + escape(__webpack_require__(/*! ../../../public/img/bg_2.jpg */ "./public/img/bg_2.jpg")) + ");\n  background-size: cover;\n  background-repeat: no-repeat;\n  height: 100vh;\n  /* width: 100vw; */\n  overflow: hidden;\n}\n.main-ui[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  height: 100%;\n  padding: 80px 0;\n}\n.main-ui .text h4[data-v-b3c5cf30] {\n  color: rgb(61, 16, 16);\n}\n.main-ui .text h1[data-v-b3c5cf30] {\n  font-weight: bold;\n}\n.choose-box[data-v-b3c5cf30] {\n  width: 100%;\n  height: 70px;\n  background-color: white;\n  position: relative;\n  z-index: 999;\n}", ""]);
+exports.push([module.i, "h1[data-v-b3c5cf30], h2[data-v-b3c5cf30], h3[data-v-b3c5cf30], h4[data-v-b3c5cf30], h5[data-v-b3c5cf30] {\n  margin: 0 !important;\n  padding: 0 !important;\n}\n.main-container[data-v-b3c5cf30] {\n  position: relative;\n  background-image: url(" + escape(__webpack_require__(/*! ../../../public/img/bg_3.jpg */ "./public/img/bg_3.jpg")) + ");\n  background-size: cover;\n  background-repeat: no-repeat;\n  height: 100vh;\n  /* width: 100vw; */\n  overflow: hidden;\n}\n.main-ui[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  height: 100%;\n  padding: 80px 0;\n}\n.main-ui .text[data-v-b3c5cf30] {\n  line-height: 0.2;\n  color: white;\n}\n.main-ui .text .selected-color span[data-v-b3c5cf30], .main-ui .text .selected-color h5[data-v-b3c5cf30] {\n  font-weight: bold;\n}\n.main-ui .text h1[data-v-b3c5cf30] {\n  font-weight: bold;\n}\n.choose-box[data-v-b3c5cf30] {\n  width: 100%;\n  height: 70px;\n  background-color: white;\n  position: relative;\n  z-index: 999;\n}\n.choose-box .choose-color[data-v-b3c5cf30] {\n  display: flex;\n  align-items: center;\n  height: 100%;\n}\n.choose-box .choose-color .next[data-v-b3c5cf30] {\n  margin: 0 5px;\n  cursor: pointer;\n}\n.choose-box .choose-color .next:hover span[data-v-b3c5cf30] {\n  margin: 0 8px;\n}\n.choose-box .choose-color .next span[data-v-b3c5cf30] {\n  font-size: 1.3em;\n  font-weight: bold;\n}\n.choose-box .choose-color .color-box[data-v-b3c5cf30] {\n  margin: 0 5px;\n  height: 30px;\n  width: 30px;\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -38679,50 +38765,89 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "base-face standard-circle" }, [
-    _c("div", { staticClass: "face standard-circle" }, [
+  return _c(
+    "div",
+    {
+      staticClass: "base-face standard-circle",
+      style:
+        "border: 2px solid " + (_vm.faceColor ? _vm.faceColor : "silver") + ";",
+    },
+    [
       _c(
         "div",
         {
-          staticClass: "base-hands hour standard-circle",
+          staticClass: "face standard-circle",
           style:
-            "transform: translate(-50% , -50%) rotate(" +
-            _vm.hour * 15 +
-            "deg);",
-          attrs: { id: "hour" },
+            "background-color:" + (_vm.faceColor ? _vm.faceColor : "silver"),
         },
-        [_c("div", { staticClass: "standard-hands hour" })]
+        [
+          _c(
+            "div",
+            {
+              staticClass: "base-hands hour standard-circle",
+              style:
+                "transform: translate(-50% , -50%) rotate(" +
+                _vm.hour * 15 +
+                "deg);",
+              attrs: { id: "hour" },
+            },
+            [
+              _c("div", {
+                staticClass: "standard-hands hour",
+                style:
+                  "background-color:" +
+                  (_vm.handsColor ? _vm.handsColor : "white"),
+              }),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "base-hands minute standard-circle",
+              style:
+                "transform: translate(-50% , -50%) rotate(" +
+                _vm.minute * 6 +
+                "deg);",
+              attrs: { id: "minute" },
+            },
+            [
+              _c("div", {
+                staticClass: "standard-hands minute",
+                style:
+                  "background-color:" +
+                  (_vm.handsColor ? _vm.handsColor : "white"),
+              }),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "base-hands second standard-circle",
+              style:
+                "transform: translate(-50% , -50%) rotate(" +
+                _vm.second * 6 +
+                "deg); background-color:" +
+                (_vm.handsColor ? _vm.handsColor : "white") +
+                ";",
+              attrs: { id: "second" },
+            },
+            [
+              _c("div", {
+                staticClass: "standard-hands second",
+                style:
+                  "background-color:" +
+                  (_vm.handsColor ? _vm.handsColor : "white"),
+              }),
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "hands standard-circle" }),
+        ]
       ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "base-hands minute standard-circle",
-          style:
-            "transform: translate(-50% , -50%) rotate(" +
-            _vm.minute * 6 +
-            "deg);",
-          attrs: { id: "minute" },
-        },
-        [_c("div", { staticClass: "standard-hands minute" })]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "base-hands second standard-circle",
-          style:
-            "transform: translate(-50% , -50%) rotate(" +
-            _vm.second * 6 +
-            "deg);",
-          attrs: { id: "second" },
-        },
-        [_c("div", { staticClass: "standard-hands second" })]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "hands standard-circle" }),
-    ]),
-  ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38746,29 +38871,51 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    {
+      staticClass: "strap",
+      style:
+        "background-color: " +
+        (_vm.strapColor ? _vm.strapColor : "#342211") +
+        ";",
+    },
+    [
+      _c("div", { staticClass: "under-face" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "loop-box" }, [
+        _c("div", {
+          staticClass: "loop",
+          style:
+            "background-color: " +
+            (_vm.loopColor ? _vm.loopColor : "grey") +
+            ";",
+        }),
+        _vm._v(" "),
+        _c("div", {
+          staticClass: "loop",
+          style:
+            "background-color: " +
+            (_vm.loopColor ? _vm.loopColor : "grey") +
+            ";",
+        }),
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+    ]
+  )
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "strap" }, [
-      _c("div", { staticClass: "under-face" }),
+    return _c("div", { staticClass: "point-box" }, [
+      _c("div", { staticClass: "point" }),
       _vm._v(" "),
-      _c("div", { staticClass: "loop-box" }, [
-        _c("div", { staticClass: "loop" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "loop" }),
-      ]),
+      _c("div", { staticClass: "point" }),
       _vm._v(" "),
-      _c("div", { staticClass: "point-box" }, [
-        _c("div", { staticClass: "point" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "point" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "point" }),
-      ]),
+      _c("div", { staticClass: "point" }),
     ])
   },
 ]
@@ -38801,9 +38948,13 @@ var render = function () {
       _vm._v(" "),
       _c("div", { staticClass: "hook-center" }),
       _vm._v(" "),
-      _c("Face"),
+      _c("Face", {
+        attrs: { faceColor: _vm.faceColor, handsColor: _vm.handsColor },
+      }),
       _vm._v(" "),
-      _c("Strap"),
+      _c("Strap", {
+        attrs: { strapColor: _vm.strapColor, loopColor: _vm.loopColor },
+      }),
     ],
     1
   )
@@ -38885,28 +39036,136 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "main-container" }, [
+  return _c(
+    "div",
+    { staticClass: "main-container" },
+    [
       _c("div", { staticClass: "main-ui" }, [
         _c("div", { staticClass: "ml-5 text" }, [
-          _c("h4", { staticClass: "g-0 m-0 p-0" }, [_vm._v("MyWatch")]),
+          _c("h4", {}, [_vm._v("MyWatch")]),
           _vm._v(" "),
-          _c("h1", { staticClass: "g-0 m-0 p-0" }, [
-            _vm._v("Choose Face Color"),
+          _vm.selector == 0
+            ? _c("h1", {}, [_vm._v("Choose Face Color")])
+            : _vm.selector == 1
+            ? _c("h1", {}, [_vm._v("Choose Hands Color")])
+            : _vm.selector == 2
+            ? _c("h1", {}, [_vm._v("Choose Strap Color")])
+            : _vm.selector == 3
+            ? _c("h1", {}, [_vm._v("Choose Loop Color")])
+            : _vm._e(),
+          _vm._v(" "),
+          _c("div", { staticClass: "selected-color" }, [
+            _vm.faceColor && _vm.selector > 0
+              ? _c("div", { staticClass: "mt-1" }, [
+                  _c("h5", [_vm._v("Face")]),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      style:
+                        "color:" + (_vm.faceColor ? _vm.faceColor : "black"),
+                    },
+                    [_vm._v(_vm._s(_vm.faceColor))]
+                  ),
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.handsColor && _vm.selector > 1
+              ? _c("div", { staticClass: "mt-3" }, [
+                  _c("h5", [_vm._v("Hands")]),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      style:
+                        "color:" + (_vm.handsColor ? _vm.handsColor : "black"),
+                    },
+                    [_vm._v(_vm._s(_vm.handsColor))]
+                  ),
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.strapColor && _vm.selector > 2
+              ? _c("div", { staticClass: "mt-3" }, [
+                  _c("h5", [_vm._v("Strap")]),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      style:
+                        "color:" + (_vm.strapColor ? _vm.strapColor : "black"),
+                    },
+                    [_vm._v(_vm._s(_vm.strapColor))]
+                  ),
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.loopColor && _vm.selector > 3
+              ? _c("div", { staticClass: "mt-3" }, [
+                  _c("h5", [_vm._v("Loop")]),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      style:
+                        "color:" + (_vm.loopColor ? _vm.loopColor : "black"),
+                    },
+                    [_vm._v(_vm._s(_vm.loopColor))]
+                  ),
+                ])
+              : _vm._e(),
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "choose-box" }),
+        _c("div", { staticClass: "choose-box" }, [
+          _c(
+            "div",
+            { staticClass: "choose-color" },
+            [
+              _vm._l(_vm.colors, function (color, index) {
+                return _c("div", {
+                  key: index,
+                  staticClass: "color-box",
+                  style: "background-color:" + color,
+                  on: {
+                    click: function ($event) {
+                      return _vm.selectColor(color, index)
+                    },
+                  },
+                })
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "next",
+                  on: {
+                    click: function ($event) {
+                      return _vm.goNext()
+                    },
+                  },
+                },
+                [_c("span", [_vm._v("Next")])]
+              ),
+            ],
+            2
+          ),
+        ]),
       ]),
-    ])
-  },
-]
+      _vm._v(" "),
+      _c("Watch", {
+        attrs: {
+          faceColor: _vm.faceColor,
+          handsColor: _vm.handsColor,
+          strapColor: _vm.strapColor,
+          loopColor: _vm.loopColor,
+        },
+      }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -54320,14 +54579,14 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./public/img/bg_2.jpg":
+/***/ "./public/img/bg_3.jpg":
 /*!*****************************!*\
-  !*** ./public/img/bg_2.jpg ***!
+  !*** ./public/img/bg_3.jpg ***!
   \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/bg_2.jpg?e9c3de3ad925b624253ebd470f6ec20d";
+module.exports = "/images/bg_3.jpg?00effeff176ec85139ff7dc90487d9e5";
 
 /***/ }),
 

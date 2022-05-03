@@ -3,8 +3,8 @@
 
         <div class="hook-box"></div>
         <div class="hook-center"></div>
-        <Face />
-        <Strap />
+        <Face :faceColor="faceColor" :handsColor="handsColor" />
+        <Strap :strapColor="strapColor" :loopColor="loopColor"/>
     </div>
 </template>
 
@@ -16,7 +16,12 @@ export default {
     data(){
         return{}
     },
-    props:{},
+    props:{
+        faceColor: String,
+        handsColor: String,
+        strapColor: String,
+        loopColor: String,
+    },
     components:{Face, Strap},
     methods:{},
 }
